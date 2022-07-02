@@ -1,1 +1,2 @@
-# behavior_tree
+# Behavior Tree Library
+

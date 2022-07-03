@@ -11,6 +11,14 @@ RUN apt-get update \
     ca-certificates \
     cmake \
     git \
+    software-properties-common \
+  && rm -rf /var/lib/apt/lists/*
+
+RUN add-apt-repository -y ppa:ubuntu-toolchain-r/test \
+  && apt-get update \
+  && apt-get install --no-install-recommends -y \
+    gcc-11 \
+    g++-11 \
   && rm -rf /var/lib/apt/lists/*
 
 WORKDIR /usr/src/betree

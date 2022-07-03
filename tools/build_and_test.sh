@@ -7,6 +7,5 @@ cd $(dirname "$(readlink -f "$BASH_SOURCE")")/..
 mkdir -p build
 
 cd build
-cmake ..
-make all
-ctest
+cmake .. -DCMAKE_TOOLCHAIN_FILE=../cmake/x86-linux-gcc-11.cmake
+make all && ctest --verbose

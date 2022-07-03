@@ -1,0 +1,4 @@
+set(CMAKE_SYSTEM_NAME Linux)
+
+set(CMAKE_C_COMPILER gcc-11 CACHE INTERNAL "C compiler")
+set(CMAKE_CXX_COMPILER g++-11 CACHE INTERNAL "C++ compiler")
